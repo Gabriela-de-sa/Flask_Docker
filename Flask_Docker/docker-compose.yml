@@ -14,4 +14,4 @@ db:
   environment:
       MYSQL_ROOT_PASSWORD: gabriela123
   ports:
-    - "3309:3309"
+    - "3307:3307"
