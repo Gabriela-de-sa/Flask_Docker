@@ -1,6 +1,6 @@
 web:
   build: .
-  working_dir: /data
+  working_dir: /Flask_Docker
   command: python main.py
   links:
     - db
@@ -14,4 +14,4 @@ db:
   environment:
       MYSQL_ROOT_PASSWORD: gabriela123
   ports:
-    - "3307:3307"
+    - "3309:3309"
