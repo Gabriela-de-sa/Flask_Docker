@@ -3,6 +3,16 @@ services:
   mysql:
     image: mysql:5.7
     container_name: my_mysql
+    environment:
+        MYSQL_ROOT_PASSWORD: gabriela123
+    ports:
+      - "3309:3309"
   
-  python_web:
-    image: 
+  web:
+    build: .
+    workdir: /data
+    command: python main.py
+    links:
+      - mysql
+    ports:
+      - 5005:5005
